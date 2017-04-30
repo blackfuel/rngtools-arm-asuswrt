@@ -8,7 +8,7 @@ cd rngtools-arm-asuswrt
 ./rngtools.sh
 ```
 
-### Usage
+### Usage: rngd
 ```
 Usage: rngd [OPTION...]
 Check and feed random data from hardware device to kernel entropy pool.
@@ -42,6 +42,7 @@ for any corresponding short options.
 Report bugs to Jeff Garzik <jgarzik@pobox.com>.
 ```
 
+### Usage: rngtest
 ```
 Usage: rngtest [OPTION...]
 Check the randomness of data using FIPS 140-2 RNG tests.
