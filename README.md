@@ -70,6 +70,7 @@ Report bugs to Jeff Garzik <jgarzik@pobox.com>.
 
 ### Links
 [Manpage for rngd](https://github.com/blackfuel/rngtools-arm-asuswrt/blob/master/rngd.md)
+[Manpage for rngtest](https://github.com/blackfuel/rngtools-arm-asuswrt/blob/master/rngtest.md)
 
 
 
