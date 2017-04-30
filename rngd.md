@@ -1,21 +1,3 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sun Apr 30 14:32:56 2017 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta name="generator" content="groff -Thtml, see www.gnu.org">
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<meta name="Content-Style" content="text/css">
-<style type="text/css">
-       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
-       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
-       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
-       h1      { text-align: center }
-</style>
-<title>RNGD</title>
-
-</head>
 <body>
 
 <h1 align="center">RNGD</h1>
@@ -188,4 +170,3 @@ Matt Sottek <br>
 Brad Hill</p>
 <hr>
 </body>
-</html>
