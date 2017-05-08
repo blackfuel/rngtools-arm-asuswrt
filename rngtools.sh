@@ -105,15 +105,23 @@ fi
 # RNG-TOOLS # ###############################################################
 ############# ###############################################################
 
-DL="rng-tools-5.tar.gz"
-URL="https://downloads.sourceforge.net/project/gkernel/rng-tools/5/$DL"
+#DL="rng-tools-5.tar.gz"
+#URL="https://downloads.sourceforge.net/project/gkernel/rng-tools/5/$DL"
+#FOLDER="${DL%.tar.gz*}"
+DL="rng-tools_2-unofficial-mt.14.orig.tar.bz2"
+URL="https://launchpad.net/ubuntu/+archive/primary/+files/$DL"
+FOLDER="rng-tools-2-unofficial-mt.14"
 mkdir -p $SRC/rng-tools && cd $SRC/rng-tools
-FOLDER="${DL%.tar.gz*}"
 [ "$REBUILD_ALL" == "1" ] && rm -rf "$FOLDER"
 if [ ! -f "$FOLDER/__package_installed" ]; then
 [ ! -f "$DL" ] && wget $URL
-[ ! -d "$FOLDER" ] && tar xzvf $DL
+
+#[ ! -d "$FOLDER" ] && tar xzvf $DL
+[ ! -d "$FOLDER" ] && tar xjvf $DL
+
 cd $FOLDER
+
+[ ! -f "configure" ] && [ -f "autogen.sh" ] && ./autogen.sh
 
 PKG_CONFIG_PATH="$PACKAGE_ROOT/lib/pkgconfig" \
 OPTS="-ffunction-sections -fdata-sections -O3 -pipe -march=armv7-a -mtune=cortex-a9 -fno-caller-saves -mfloat-abi=soft -Wall -fPIC -std=gnu99 -I$PACKAGE_ROOT/include -I$FOLDER_ARGP" \
