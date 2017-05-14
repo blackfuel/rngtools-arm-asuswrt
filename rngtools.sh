@@ -27,7 +27,7 @@ echo $PATH | grep -qF /opt/brcm-arm || export PATH=$PATH:/opt/brcm-arm/bin:/opt/
 [ ! -h /opt/brcm-arm ] && sudo ln -sf $HOME/asuswrt-merlin/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3 /opt/brcm-arm
 [ ! -d /projects/hnd/tools/linux ] && sudo mkdir -p /projects/hnd/tools/linux
 [ ! -h /projects/hnd/tools/linux/hndtools-arm-linux-2.6.36-uclibc-4.5.3 ] && sudo ln -sf /opt/brcm-arm /projects/hnd/tools/linux/hndtools-arm-linux-2.6.36-uclibc-4.5.3
-#sudo apt-get install makedepends libltdl-dev automake1.11
+#sudo apt-get install  xutils-dev libltdl-dev automake1.11
 #MAKE="make -j`nproc`"
 MAKE="make -j1"
 
@@ -105,19 +105,19 @@ fi
 # RNG-TOOLS # ###############################################################
 ############# ###############################################################
 
-#DL="rng-tools-5.tar.gz"
-#URL="https://downloads.sourceforge.net/project/gkernel/rng-tools/5/$DL"
-#FOLDER="${DL%.tar.gz*}"
-DL="rng-tools_2-unofficial-mt.14.orig.tar.bz2"
-URL="https://launchpad.net/ubuntu/+archive/primary/+files/$DL"
-FOLDER="rng-tools-2-unofficial-mt.14"
+DL="rng-tools-5.tar.gz"
+URL="https://downloads.sourceforge.net/project/gkernel/rng-tools/5/$DL"
+FOLDER="${DL%.tar.gz*}"
+#DL="rng-tools_2-unofficial-mt.14.orig.tar.bz2"
+#URL="https://launchpad.net/ubuntu/+archive/primary/+files/$DL"
+#FOLDER="rng-tools-2-unofficial-mt.14"
 mkdir -p $SRC/rng-tools && cd $SRC/rng-tools
 [ "$REBUILD_ALL" == "1" ] && rm -rf "$FOLDER"
 if [ ! -f "$FOLDER/__package_installed" ]; then
 [ ! -f "$DL" ] && wget $URL
 
-#[ ! -d "$FOLDER" ] && tar xzvf $DL
-[ ! -d "$FOLDER" ] && tar xjvf $DL
+[ ! -d "$FOLDER" ] && tar xzvf $DL
+#[ ! -d "$FOLDER" ] && tar xjvf $DL
 
 cd $FOLDER
 
