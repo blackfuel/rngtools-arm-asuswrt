@@ -73,7 +73,7 @@ fi
 # GCRYPT # ##################################################################
 ########## ##################################################################
 
-DL="libgcrypt-1.7.6.tar.bz2"
+DL="libgcrypt-1.7.8.tar.bz2"
 URL="https://gnupg.org/ftp/gcrypt/libgcrypt/$DL"
 mkdir -p $SRC/gcrypt && cd $SRC/gcrypt
 FOLDER="${DL%.tar.bz2*}"
